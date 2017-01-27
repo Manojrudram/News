@@ -1,0 +1,26 @@
+
+.item.highlight{
+color: white;
+       background-color :#1e1e1b;
+       border-color :#1e1e1b;      
+}
+
+.profile{
+       background-color :#1e1e1b;      
+}
+
+.item-avatar{
+    max-width: 80px;
+    max-height: 80px;
+   
+    border-radius: 50%;
+    
+           border-color :orangered;
+}
+.pic{
+           background-color : #4B4848;
+}
+.sea{
+    background: #353434;
+
+}

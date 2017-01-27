@@ -1,0 +1,26 @@
+<ion-view view-title="latestNews">
+ 
+  <ion-content>
+ <ul>
+<li ng-repeat="x in newslat">
+<div class="li" ng-click="func(x.urlToImage , x.title)"
+       <div class="list">
+         <div class="item item-text-wrap">
+    <a class="item item-thumbnail-left" href="#">
+      <img src="{{x.urlToImage}}" height="70" width="70">
+
+      <h2 style="color: orangered">{{x.title}} </h2><br>
+      <h4>{{x.description}}</h4><br>
+ 
+      <p>  <i class="icon ion-ios-sunny-outline"></i>
+    {{x.author}}<br>  <span class="item-note">
+      {{x.publishedAt}}
+    </span></p>
+    </a>
+   
+         </div></div></div></div>
+            </li>
+    </ul>
+  
+  </ion-content>
+</ion-view>
