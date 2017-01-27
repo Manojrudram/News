@@ -51,6 +51,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+     .state('app.content', {
+      url: '/content',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/content.html',
+          controller: 'latestNewsCtrl'
+        }
+      }
+    })
     .state('app.topNews', {
       url: '/topNews',
       views: {

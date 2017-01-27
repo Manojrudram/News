@@ -57,12 +57,18 @@ angular.module('starter.controllers', [])
 .controller('latestNewsCtrl',function($scope,$http){
  $http.get("https://newsapi.org/v1/articles?source=the-hindu&sortBy=latest&apiKey=c023863c25b445068d7bf9f98b660991").then(function(response){
    $scope.newslat=response.data.articles;
-    $scope.func= function(imageurl , title){
-      $scope.imageurl= imageurl;
-      $scope.title= title;
-      alert(imageurl)
-    }
- });
+   })
+    $scope.func= function(imageurl , title , description , author , publish , url1){
+     var img_src = imageurl;
+     var node=document.getElementById('img');
+     node.innerHTML= "<img src='"+img_src+"' alt='not avialble' class='newsimage' height= 250 width= 400>";
+      document.getElementById('title').innerHTML = title;
+      document.getElementById('description').innerHTML = description;
+      document.getElementById('author').innerHTML = author;
+      document.getElementById('url').innerHTML = url1;
+      document.getElementById('publish').innerHTML = publish;
+}     
+
 })
 
 .controller('descriptionCtrl',function($scope,$http){
@@ -73,4 +79,4 @@ angular.module('starter.controllers', [])
 
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+}); 
